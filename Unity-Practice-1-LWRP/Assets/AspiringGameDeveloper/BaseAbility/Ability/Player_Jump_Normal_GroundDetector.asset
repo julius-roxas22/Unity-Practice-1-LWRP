@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Player_Jump_Normal_GroundDetector
   m_EditorClassIdentifier: 
   checkTime: 0.15
-  groundDistance: 0.18
+  groundDistance: 0.25
