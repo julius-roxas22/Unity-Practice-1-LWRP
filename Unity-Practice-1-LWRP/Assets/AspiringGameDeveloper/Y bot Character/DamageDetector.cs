@@ -63,6 +63,7 @@ namespace AspringGameProgrammer
 
         void takeDamage(AttackInfo info)
         {
+            CameraManager.getInstance.cameraShake();
             control.GetComponent<BoxCollider>().enabled = false;
             control.getRigidbody.velocity = Vector3.zero;
             control.getRigidbody.useGravity = false;
