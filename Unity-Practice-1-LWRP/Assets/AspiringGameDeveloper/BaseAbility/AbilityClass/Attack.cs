@@ -35,6 +35,7 @@ namespace AspringGameProgrammer
         {
             registerAttack(stateInfo);
             deRegisterAttack(stateInfo);
+            checkCombo(stateInfo, control, animator);
         }
 
         void registerAttack(AnimatorStateInfo stateInfo)
@@ -70,6 +71,20 @@ namespace AspringGameProgrammer
             }
         }
 
+        void checkCombo(AnimatorStateInfo stateInfo, CharacterControl control, Animator animator)
+        {
+            if (stateInfo.normalizedTime >= startAttackTime + ((endAttackTime - startAttackTime) / 3f))
+            {
+                if (stateInfo.normalizedTime < endAttackTime + ((endAttackTime - startAttackTime) / 2f))
+                {
+                    if (control.attack)
+                    {
+                        animator.SetBool(TransitionParameter.Attack.ToString(), true);
+                    }
+                }
+            }
+        }
+
         public override void onStateExit(CharacterControl control, Animator animator, AnimatorStateInfo stateInfo)
         {
             clearAttack();
@@ -81,7 +96,7 @@ namespace AspringGameProgrammer
 
             foreach (AttackInfo info in AttackManager.getInstance.currentAttacks)
             {
-                if (null == info || info.isFinished)
+                if (null == info || info.attackAbility == this)
                 {
                     finishedAttacks.Add(info);
                 }

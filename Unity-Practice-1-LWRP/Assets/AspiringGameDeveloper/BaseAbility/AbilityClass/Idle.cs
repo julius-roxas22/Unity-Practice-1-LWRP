@@ -10,7 +10,6 @@ namespace AspringGameProgrammer
         public override void onStateEnter(CharacterControl control, Animator animator, AnimatorStateInfo stateInfo)
         {
             animator.SetBool(TransitionParameter.Jump.ToString(), false);
-            animator.SetBool(TransitionParameter.Grounded.ToString(), true);
             animator.SetBool(TransitionParameter.Attack.ToString(), false);
         }
 
@@ -40,7 +39,7 @@ namespace AspringGameProgrammer
 
         public override void onStateExit(CharacterControl control, Animator animator, AnimatorStateInfo stateInfo)
         {
-
+            animator.SetBool(TransitionParameter.Attack.ToString(), false);
         }
     }
 }

@@ -1,0 +1,50 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f036034a0b233e4197bba199fee7832, type: 3}
+  m_Name: Player_Uppercut_Prep_MoveForward
+  m_EditorClassIdentifier: 
+  constantMove: 1
+  speedForward: 1.4
+  blockDistance: 0.2
+  speedGraph:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: -0.040143102
+      outSlope: -0.040143102
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.40240866
+      value: 0.98384607
+      inSlope: -0.20869865
+      outSlope: -0.20869865
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.22470194
+      outWeight: 1
+    - serializedVersion: 3
+      time: 0.5
+      value: 0
+      inSlope: -10.0812845
+      outSlope: -10.0812845
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
