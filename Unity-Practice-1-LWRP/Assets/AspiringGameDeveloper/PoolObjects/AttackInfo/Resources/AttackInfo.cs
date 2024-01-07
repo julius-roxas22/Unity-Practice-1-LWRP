@@ -11,6 +11,7 @@ namespace AspringGameProgrammer
         public CharacterControl attacker = null;
         public Attack attackAbility;
 
+        public bool launchIntoAir;
         public bool isCollide;
         public bool faceTheAttacker;
         public bool isRegisterd;
@@ -35,6 +36,7 @@ namespace AspringGameProgrammer
 
             this.attackAbility = attackAbility;
             colliderNames = attackAbility.colliderNames;
+            launchIntoAir = attackAbility.launchIntoAir;
             isCollide = attackAbility.isCollide;
             faceTheAttacker = attackAbility.faceTheAttacker;
             range = attackAbility.range;

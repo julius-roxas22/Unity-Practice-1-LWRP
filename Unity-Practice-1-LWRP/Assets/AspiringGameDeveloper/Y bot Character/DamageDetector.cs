@@ -67,7 +67,7 @@ namespace AspringGameProgrammer
             control.GetComponent<BoxCollider>().enabled = false;
             control.getRigidbody.velocity = Vector3.zero;
             control.getRigidbody.useGravity = false;
-            control.skinnedMesh.runtimeAnimatorController = DeathAnimationManager.getInstance.getDeathAnimator(bodyParts);
+            control.skinnedMesh.runtimeAnimatorController = DeathAnimationManager.getInstance.getDeathAnimator(bodyParts, info);
             info.currentHits++;
         }
     }

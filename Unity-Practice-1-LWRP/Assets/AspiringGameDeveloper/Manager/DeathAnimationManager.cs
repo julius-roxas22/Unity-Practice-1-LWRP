@@ -19,19 +19,30 @@ namespace AspringGameProgrammer
             }
         }
 
-        public RuntimeAnimatorController getDeathAnimator(BodyParts bodyParts)
+        public RuntimeAnimatorController getDeathAnimator(BodyParts bodyParts, AttackInfo info)
         {
             setUpDeathAnimationLoader();
             candidates.Clear();
 
             foreach (DeathAnimationData data in deathAnimationLoader.deathAnimationDatas)
             {
-                foreach (BodyParts body in data.bodyParts)
+
+                if (info.launchIntoAir)
                 {
-                    if (bodyParts == body)
+                    if (data.launchIntoAir)
                     {
                         candidates.Add(data.deathController);
-                        break;
+                    }
+                }
+                else
+                {
+                    foreach (BodyParts body in data.bodyParts)
+                    {
+                        if (bodyParts == body)
+                        {
+                            candidates.Add(data.deathController);
+                            break;
+                        }
                     }
                 }
             }

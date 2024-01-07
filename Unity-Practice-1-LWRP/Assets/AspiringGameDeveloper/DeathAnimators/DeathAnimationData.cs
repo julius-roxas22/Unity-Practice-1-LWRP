@@ -9,6 +9,7 @@ namespace AspringGameProgrammer
     {
         public List<BodyParts> bodyParts = new List<BodyParts>();
         public RuntimeAnimatorController deathController;
+        public bool launchIntoAir;
         public bool isFacingAttack;
     }
 }

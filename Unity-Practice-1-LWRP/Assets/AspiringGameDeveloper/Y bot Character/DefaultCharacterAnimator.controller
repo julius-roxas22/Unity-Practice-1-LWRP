@@ -89,6 +89,7 @@ MonoBehaviour:
   abilityData:
   - {fileID: 11400000, guid: cdf7709089ab24e43ba4163e496e8e2b, type: 2}
   - {fileID: 11400000, guid: 713fbfc1d15a1a840aee9d4d80df070c, type: 2}
+  - {fileID: 11400000, guid: ea87356d5b7aa9e4ebbeed2849487089, type: 2}
 --- !u!1101 &-4744722920285998897
 AnimatorStateTransition:
   m_ObjectHideFlags: 1

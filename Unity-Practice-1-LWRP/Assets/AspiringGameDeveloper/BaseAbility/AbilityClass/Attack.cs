@@ -11,6 +11,7 @@ namespace AspringGameProgrammer
         public float endAttackTime;
         public List<string> colliderNames = new List<string>();
 
+        public bool launchIntoAir;
         public bool isCollide;
         public bool faceTheAttacker;
         public float range;
