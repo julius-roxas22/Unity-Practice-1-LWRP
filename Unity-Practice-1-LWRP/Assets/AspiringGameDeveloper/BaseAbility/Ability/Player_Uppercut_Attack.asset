@@ -12,10 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1025435b9f27d8148bb2e3f9e7eaac62, type: 3}
   m_Name: Player_Uppercut_Attack
   m_EditorClassIdentifier: 
-  startAttackTime: 0.2
-  endAttackTime: 0.4
+  startAttackTime: 0.25
+  endAttackTime: 0.52
   colliderNames:
   - mixamorig:RightHand
+  debug: 1
   launchIntoAir: 1
   isCollide: 1
   faceTheAttacker: 0

@@ -11,6 +11,8 @@ namespace AspringGameProgrammer
         public float endAttackTime;
         public List<string> colliderNames = new List<string>();
 
+        public bool debug;
+
         public bool launchIntoAir;
         public bool isCollide;
         public bool faceTheAttacker;
@@ -47,6 +49,11 @@ namespace AspringGameProgrammer
                 {
                     if (null == info) continue;
 
+                    //if (debug)
+                    //{
+                    //    Debug.Log(name + " Register attack");
+                    //}
+
                     if (info.attackAbility == this && !info.isRegisterd)
                     {
                         info.registerAttack(this);
@@ -62,6 +69,11 @@ namespace AspringGameProgrammer
                 foreach (AttackInfo info in AttackManager.getInstance.currentAttacks)
                 {
                     if (null == info) continue;
+
+                    //if (debug)
+                    //{
+                    //    Debug.Log(name + " De-Register attack");
+                    //}
 
                     if (info.attackAbility == this && !info.isFinished)
                     {
