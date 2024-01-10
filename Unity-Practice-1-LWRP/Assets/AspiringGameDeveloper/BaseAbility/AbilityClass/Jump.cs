@@ -35,6 +35,7 @@ namespace AspringGameProgrammer
                 control.getRigidbody.AddForce(Vector3.up * jumpForce);
                 isJumped = true;
             }
+
         }
 
         public override void onStateExit(CharacterControl control, Animator animator, AnimatorStateInfo stateInfo)

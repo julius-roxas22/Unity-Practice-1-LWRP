@@ -9,31 +9,32 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8d1fe347487018e43b492a807f4d4b0b, type: 3}
-  m_Name: Player_Uppercut_Jump
+  m_Script: {fileID: 11500000, guid: 8f036034a0b233e4197bba199fee7832, type: 3}
+  m_Name: Player_Falling_Idle_MoveForward
   m_EditorClassIdentifier: 
-  jumpTiming: 0.3
-  jumpForce: 270
-  pullGravity:
+  constantMove: 0
+  speedForward: 1
+  blockDistance: 0.25
+  speedGraph:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 34
       weightedMode: 0
       inWeight: 0
-      outWeight: 0.33333334
+      outWeight: 0
     - serializedVersion: 3
       time: 1
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 34
       weightedMode: 0
-      inWeight: 0.33333334
+      inWeight: 0
       outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2

@@ -61,7 +61,7 @@ namespace AspringGameProgrammer
             return false;
         }
 
-        void takeDamage(AttackInfo info)
+        private void takeDamage(AttackInfo info)
         {
             CameraManager.getInstance.cameraShake();
             control.GetComponent<BoxCollider>().enabled = false;
