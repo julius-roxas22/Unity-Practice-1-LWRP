@@ -9,7 +9,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef9b1524bc3960b43b1386b68cd0503c, type: 3}
-  m_Name: DeathForceTransition
+  m_Script: {fileID: 11500000, guid: 1025435b9f27d8148bb2e3f9e7eaac62, type: 3}
+  m_Name: Player_Smash_Landing_Attack
   m_EditorClassIdentifier: 
-  transitionTiming: 0.9
+  startAttackTime: 0.25
+  endAttackTime: 0.4
+  colliderNames: []
+  debug: 0
+  launchIntoAir: 0
+  isCollide: 0
+  faceTheAttacker: 0
+  range: 2.5
+  maxHits: 10

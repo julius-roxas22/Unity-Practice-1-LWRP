@@ -92,8 +92,8 @@ namespace AspringGameProgrammer
 
         private void FixedUpdate()
         {
-            if (getRigidbody.velocity.y < 0f) getRigidbody.velocity -= Vector3.up * gravityMultiplier;
-            if (getRigidbody.velocity.y > 0f && !jump) getRigidbody.velocity -= Vector3.up * pullGravity;
+            if (getRigidbody.velocity.y < 0f) getRigidbody.velocity -= Vector3.up * pullGravity;
+            if (getRigidbody.velocity.y > 0f && !jump) getRigidbody.velocity -= Vector3.up * gravityMultiplier;
         }
 
         public void createSpheres()

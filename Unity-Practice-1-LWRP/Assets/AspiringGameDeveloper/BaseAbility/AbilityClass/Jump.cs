@@ -27,8 +27,7 @@ namespace AspringGameProgrammer
 
         public override void onStateUpdate(CharacterControl control, Animator animator, AnimatorStateInfo stateInfo)
         {
-            //control.gravityMultiplier = gravityMultiplier.Evaluate(stateInfo.normalizedTime);
-            control.pullGravity = pullGravity.Evaluate(stateInfo.normalizedTime);
+            control.gravityMultiplier = pullGravity.Evaluate(stateInfo.normalizedTime);
 
             if (!isJumped && stateInfo.normalizedTime >= jumpTiming)
             {
@@ -40,7 +39,7 @@ namespace AspringGameProgrammer
 
         public override void onStateExit(CharacterControl control, Animator animator, AnimatorStateInfo stateInfo)
         {
-            control.pullGravity = 0f;
+            control.gravityMultiplier = 0f;
             isJumped = false;
         }
     }

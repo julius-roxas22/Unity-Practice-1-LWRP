@@ -100,6 +100,7 @@ namespace AspringGameProgrammer
 
         public override void onStateExit(CharacterControl control, Animator animator, AnimatorStateInfo stateInfo)
         {
+            animator.SetBool(TransitionParameter.Attack.ToString(), false);
             clearAttack();
         }
 

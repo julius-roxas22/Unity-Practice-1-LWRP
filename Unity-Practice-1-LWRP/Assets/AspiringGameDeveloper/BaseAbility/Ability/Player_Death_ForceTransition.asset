@@ -9,8 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: be57326038f817841ada0843ab7a3834, type: 3}
-  m_Name: GeneralGroundDetector
+  m_Script: {fileID: 11500000, guid: ef9b1524bc3960b43b1386b68cd0503c, type: 3}
+  m_Name: Player_Death_ForceTransition
   m_EditorClassIdentifier: 
-  checkTime: 0.5
-  groundDistance: 0.25
+  transitionTiming: 0.9

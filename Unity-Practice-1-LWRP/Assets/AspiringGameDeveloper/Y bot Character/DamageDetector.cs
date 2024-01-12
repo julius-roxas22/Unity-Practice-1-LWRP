@@ -42,6 +42,15 @@ namespace AspringGameProgrammer
                         takeDamage(info);
                     }
                 }
+                else
+                {
+                    float distance = Vector3.SqrMagnitude(transform.position - info.attacker.transform.position);
+
+                    if (distance <= info.range)
+                    {
+                        takeDamage(info);
+                    }
+                }
             }
         }
 
@@ -63,7 +72,10 @@ namespace AspringGameProgrammer
 
         private void takeDamage(AttackInfo info)
         {
-            CameraManager.getInstance.cameraShake();
+            if (info.isCollide)
+            {
+                CameraManager.getInstance.cameraShake();
+            }
             control.GetComponent<BoxCollider>().enabled = false;
             control.getRigidbody.velocity = Vector3.zero;
             control.getRigidbody.useGravity = false;

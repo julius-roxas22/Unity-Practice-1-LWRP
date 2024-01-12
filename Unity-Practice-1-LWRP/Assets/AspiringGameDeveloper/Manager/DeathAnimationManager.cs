@@ -34,6 +34,17 @@ namespace AspringGameProgrammer
                         candidates.Add(data.deathController);
                     }
                 }
+                else if (!info.isCollide)
+                {
+                    foreach (BodyParts body in data.bodyParts)
+                    {
+                        if (body == BodyParts.Lower || body == BodyParts.Leg)
+                        {
+                            candidates.Add(data.deathController);
+                            break;
+                        }
+                    }
+                }
                 else
                 {
                     foreach (BodyParts body in data.bodyParts)
