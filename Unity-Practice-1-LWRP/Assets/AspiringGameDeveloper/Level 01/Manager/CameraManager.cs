@@ -9,13 +9,20 @@ namespace AspringGameProgrammer
         private CameraController cameraController;
         private Coroutine routine;
 
-        public CameraController getCameraController()
+        public Camera mainCamera;
+
+        private CameraController getCameraController()
         {
             if(null == cameraController)
             {
                 cameraController = FindObjectOfType<CameraController>();
             }
             return cameraController;
+        }
+
+        private void Awake()
+        {
+            mainCamera = GameObject.Find("Main Camera").GetComponent<Camera>();
         }
 
         IEnumerator cameraStateTiming()

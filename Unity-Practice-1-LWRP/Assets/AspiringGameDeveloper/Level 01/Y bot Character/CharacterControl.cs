@@ -15,6 +15,7 @@ namespace AspringGameProgrammer
     }
     public class CharacterControl : MonoBehaviour
     {
+        public CharacterSelectType characterSelectType;
         public Animator skinnedMesh;
         public Material skinnedMaterial;
 
@@ -45,6 +46,15 @@ namespace AspringGameProgrammer
             createSpheres();
 
             if (switchBack) faceForward(false);
+            registerCharacter();
+        }
+
+        private void registerCharacter()
+        {
+            if (!CharacterManager.getInstance.characterControls.Contains(this))
+            {
+                CharacterManager.getInstance.characterControls.Add(this);
+            }
         }
 
         public void setRagdollParts()
