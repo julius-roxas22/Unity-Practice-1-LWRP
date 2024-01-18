@@ -2472,6 +2472,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a9a9bbecbacc0648aa3b742a1a764d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  characterSelectType: 3
   skinnedMesh: {fileID: 377274716082527948}
   skinnedMaterial: {fileID: 2100000, guid: acd04ff2d822d174690ee1060de91b7e, type: 2}
   movementSpeed: 2

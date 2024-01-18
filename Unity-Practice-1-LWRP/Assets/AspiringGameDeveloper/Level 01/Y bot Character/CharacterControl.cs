@@ -13,6 +13,13 @@ namespace AspringGameProgrammer
         Grounded,
         Attack,
     }
+
+    public enum AllScenes
+    {
+        Character_Selection,
+        Main_Sample
+    }
+
     public class CharacterControl : MonoBehaviour
     {
         public CharacterSelectType characterSelectType;
@@ -74,11 +81,11 @@ namespace AspringGameProgrammer
 
         public List<TriggerDetectors> getAllTriggerDetector()
         {
-            if(triggerDetectors.Count == 0)
+            if (triggerDetectors.Count == 0)
             {
                 TriggerDetectors[] allTriggers = GetComponentsInChildren<TriggerDetectors>();
 
-                foreach(TriggerDetectors t in allTriggers)
+                foreach (TriggerDetectors t in allTriggers)
                 {
                     triggerDetectors.Add(t);
                 }
@@ -159,6 +166,18 @@ namespace AspringGameProgrammer
             }
         }
 
+        public Collider getPart(string partName)
+        {
+            foreach (Collider c in ragdollParts)
+            {
+                if (c.name.Contains(partName))
+                {
+                    return c;
+                }
+            }
+            return null;
+        }
+
         public GameObject createSphereEdge(Vector3 position)
         {
             return Instantiate(Resources.Load("SphereEdge"), position, Quaternion.identity, transform) as GameObject;
@@ -171,6 +190,8 @@ namespace AspringGameProgrammer
 
         public void faceForward(bool isForward)
         {
+            if (UnityEngine.SceneManagement.SceneManager.GetActiveScene().name.Equals(AllScenes.Character_Selection.ToString())) return;
+
             if (isForward) transform.rotation = Quaternion.Euler(0f, 0f, 0f);
             else transform.rotation = Quaternion.Euler(0f, 180f, 0f);
         }

@@ -127,13 +127,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4622101802042914510}
+  - component: {fileID: 6230941865479781280}
   m_Layer: 0
   m_Name: Selected Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4622101802042914510
 Transform:
   m_ObjectHideFlags: 0
@@ -150,3 +151,16 @@ Transform:
   - {fileID: 3877379168538289214}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6230941865479781280
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4283564882790759519}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f70947f610863a4385e7952bb3c0344, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  selectedSpotLight: {fileID: 0}

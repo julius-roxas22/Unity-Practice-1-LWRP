@@ -8,9 +8,18 @@ namespace AspringGameProgrammer
     {
         private RaycastHit hit;
         private Ray ray;
+        private SelectedLight selectedSpotLight;
+        private HoverLight hoverSpotLight;
 
-        public CharacterSelect characterSelect;
+        public CharacterSelect characterSelectData;
         public CharacterSelectType characterSelectType;
+
+        private void Awake()
+        {
+            characterSelectData.characterSelectType = CharacterSelectType.NONE;
+            selectedSpotLight = FindObjectOfType<SelectedLight>();
+            hoverSpotLight = FindObjectOfType<HoverLight>();
+        }
 
         private void Update()
         {
@@ -34,11 +43,14 @@ namespace AspringGameProgrammer
             {
                 if (characterSelectType != CharacterSelectType.NONE)
                 {
-                    characterSelect.characterSelectType = characterSelectType;
+                    characterSelectData.characterSelectType = characterSelectType;
+                    selectedSpotLight.selectedSpotLight.enabled = true;
+                    selectedSpotLight.transform.position = hoverSpotLight.transform.position;
                 }
                 else
                 {
-                    characterSelect.characterSelectType = CharacterSelectType.NONE;
+                    characterSelectData.characterSelectType = CharacterSelectType.NONE;
+                    selectedSpotLight.selectedSpotLight.enabled = false;
                 }
             }
 

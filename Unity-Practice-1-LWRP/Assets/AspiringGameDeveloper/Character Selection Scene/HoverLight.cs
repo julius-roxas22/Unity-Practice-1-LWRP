@@ -10,13 +10,13 @@ namespace AspringGameProgrammer
 
         private CharacterControl characterHoverSelected;
         private MouseController mouseHover;
-        private Vector3 targetPosition;
-        private Light spotLight;
+        //   private Vector3 targetPosition;
+        private Light hoverSpotLight;
 
         private void Awake()
         {
             mouseHover = FindAnyObjectByType<MouseController>();
-            spotLight = GetComponentInChildren<Light>();
+            hoverSpotLight = GetComponentInChildren<Light>();
         }
 
         private void Update()
@@ -24,7 +24,7 @@ namespace AspringGameProgrammer
             if (mouseHover.characterSelectType == CharacterSelectType.NONE)
             {
                 characterHoverSelected = null;
-                spotLight.enabled = false;
+                hoverSpotLight.enabled = false;
             }
             else
             {
@@ -34,7 +34,7 @@ namespace AspringGameProgrammer
 
         private void lightUpSelectedCharacter()
         {
-            spotLight.enabled = true;
+            hoverSpotLight.enabled = true;
 
             if (null == characterHoverSelected)
             {
